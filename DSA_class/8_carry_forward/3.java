@@ -18,3 +18,28 @@ class Pair{
 		System.out.println(cnt);
 	}
 }
+
+/*  Optimize approach
+import java.util.*;
+
+class Pair {
+    public static void main(String[] ar) {
+        char arr[] = {'a', 'b', 'e', 'g', 'a', 'g'};
+        int cnt = 0;
+        int countG = 0; // Number of 'g' seen so far (right to left)
+        int n = arr.length;
+
+        // Traverse from right to left
+        for (int i = n - 1; i >= 0; i--) {
+            if (arr[i] == 'g') {
+                countG++; // Found a 'g', update count
+            } else if (arr[i] == 'a') {
+                cnt += countG; // If 'a' found, add count of 'g' seen so far
+            }
+        }
+
+        System.out.println(cnt);
+    }
+}
+
+*/
